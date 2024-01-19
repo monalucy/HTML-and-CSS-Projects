@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* Global styles */
+body {
+    background-color: purple;
+}
+
+/* Style for the entire content */
+.my-div {
+    background-color: pink;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid darkgray;
+    color: navy;
+    font-family: Arial, sans-serif;
+}
+
+/* Styles for the added text */
+.added-text {
+    color: red; 
+    text-align: center; 
+    font-size: 16px;
+}
+
+/* Styles for header, section, footer */
+header, section, footer {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Styles for navigation */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px;
+    color: white;
+}
+
+/* Styles for the contact form */
+#contact {
+    background-color: purple;
+    color: white;
+    padding: 20px;
+    border: 2px solid darkgray;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Styles for the pictures */
+#picture img {
+    width: 150px; /* Adjust the size as needed */
+    margin-right: 10px; /* Adjust the distance between pictures */
+}
+</style>
+<title>Creativity is the key</title>
+<!-- <div> element with styling -->
+<div class="my-div">
+<h2>Creativity enables us to develop and grow our imagination!</h2>
+<p>Creativity is not only beneficial to children, but also for any age group. This will enable anyone to develop their senses, to find a purpose and to do something they enjoy.</p>
+<! -- New line of text with custom styling -->
+<p class="added-text">To be creative means to be yourself!</p>
+</div>
+<title>Creativity is the key</title>
+<!-- Internal styles using the <style> tag -->
+</head>
+<body>
+<header>
+    <h1>BE CREATIVE!</h1>
+    <p>Creativity is fun. Creativity gives life.</p>
+</header>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#pictures">Pictures</a>
+    <a href="#contact">Contact</a>
+    <a href="#videos">Videos</a>
+    <a href="#footer">Footer</a>
+</nav>
+<section id="home">
+    <h2>Home Page</h2>
+    <p>Welcome to our creative world! Here, creativity knows no bounds.</p>
+</section>
+<section id="picture">
+    <h2>Pictures</h2>
+    <p>Explore our gallery of creative minds and hands.</p>
+    <img src="C:\Users\Monica Gliga\OneDrive\Pictures\creativity image.webp" alt="creativity">
+    <img src="C:\Users\Monica Gliga\OneDrive\Pictures\creativity image.jpg" alt="mindset">
+</section>
+<section id="videos">
+    <h2>Video Section</h2>
+    <p>Watch inspiring videos that fuel your creativity.</p>
+    <iframe width="560" height="315" src="https://youtu.be/6BWLUzq6fGI?feature=shared" frameborder="0" allowfullscreen></iframe>
+</section>
+<section id="contact">
+    <h2>Contact Section</h2>
+    <p>Connect with us! Fill out the form below.</p>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</section>
+<footer>
+    <p>Creativity starts with you!</p>
+    <p class="added-text">To be creative means to be yourself!</p>
+</footer>
+</body>
+</html>

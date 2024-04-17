@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crafty Creations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Global styles */
+        body {
+            background-color: purple;
+        }
+
+        /* Style for the entire content */
+        .my-div {
+            background-color: pink;
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid darkgray;
+            color: navy;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Styles for the added text */
+        .added-text {
+            color: red;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        /* Styles for header, section, footer */
+        header, section, footer {
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        /* Styles for navigation */
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px;
+            color: white;
+        }
+
+        /* Styles for the contact form */
+        #contact {
+            background-color: purple;
+            color: white;
+            padding: 20px;
+            border: 2px solid darkgray;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input {
+            margin-bottom: 15px;
+            padding: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            padding: 8px;
+            border: none;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        /* Styles for the pictures and video */
+        #picture img {
+            width: 150px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#about">Home</a>
+        <a href="#picture" onclick="toggleSectionVisibility('picture')">Pictures</a>
+        <a href="#contact">Contact</a>
+        <a href="#videos" onclick="toggleSectionVisibility('videos')">Videos</a>
+        <a href="#footer">Footer</a>
+    </nav>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">About Us</h2>
+            <p class="lead">Crafty Creations is dedicated to promoting creativity through various craft activities. Our mission is to inspire and empower people of all ages to explore their artistic talents.</p>
+        </div>
+    </section>
+
+    <section id="services" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Craft Workshops</h5>
+                            <p class="card-text">Join our craft workshops to learn new techniques and unleash your creativity.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">DIY Kits</h5>
+                            <p class="card-text">Explore our DIY kits to create your own masterpieces at home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Craft Supplies</h5>
+                            <p class="card-text">Shop our selection of craft supplies to fuel your creative projects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Picture Modal -->
+    <section id="picture" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Pictures</h2>
+            <p class="lead">Explore our gallery of creative minds and hands.</p>
+            <img src="animation.png" alt="Animation">
+            <img src="creativity image.jpg" alt="Creativity">
+            <img src="creativity image.webp" alt="Creativity">
+            <img src="perler-beads.jpg" alt="Perler Beads">
+            <img src="resin moulds.jpg" alt="Resin Moulds">
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="videos" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Video Section</h2>
+            <p class="lead">Watch inspiring videos that fuel your creativity.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6BWLUzq6fGI" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+	
+	   <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <p class="lead text-center">Have questions or want to learn more? Get in touch!</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	    <footer id="footer" class="bg-dark text-light text-center py-3">
+        <div class="container">
+            <p class="added-text">To be creative means to be yourself!</p>
+            <p>&copy; 2024 Crafty Creations. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleSectionVisibility(sectionId) {
+            var section = document.getElementById(sectionId);
+            section.style.display = (section.style.display === 'none') ? 'block' : 'none';
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

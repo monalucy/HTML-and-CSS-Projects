@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open Enhance your creativity.html",
+            "file": "c:\\Users\\Monica Gliga\\OneDrive\\Documents\\GitHub\\HTML-and-CSS-Projects\\Basic_HTML_and_CSS\\Enhance your creativity.html"
+        }
+    ]
+}

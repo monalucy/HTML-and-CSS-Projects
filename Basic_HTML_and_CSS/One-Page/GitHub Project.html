@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tech Academy Portfolio</title>
+<style>
+  body {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header, footer {
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Added position relative */
+  }
+  nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px 0;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  .content {
+    flex-basis: 45%;
+    margin-bottom: 20px;
+    position: relative; /* Added position relative */
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer; /* Added cursor pointer */
+  }
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  .description {
+    font-size: 18px;
+  }
+  .github-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: font-size 0.3s;
+  }
+  .github-link:hover {
+    font-size: 22px;
+  }
+  form {
+    margin-top: 20px;
+    width: 100%; /* Set form width to 100% */
+  }
+  input, textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background-color: #555;
+  }
+
+  /* Added styles for responsiveness */
+  @media (max-width: 768px) {
+    .content {
+      flex-basis: 100%;
+    }
+  }
+
+  /* Added styles for the image in the header and footer */
+  header img, footer img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+  }
+
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+
+  .modal-content img {
+    width: 100%;
+    height: auto;
+  }
+
+  .modal-content .caption {
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .modal-content .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .modal-content .close:hover,
+  .modal-content .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Added style for the active image */
+  .active-image {
+    opacity: 1;
+    border: 2px solid #fff; /* Example border style */
+  }
+</style>
+</head>
+<body>
+<header id="home">
+  <h1>Tech Academy Portfolio</h1>
+  <p class="description">Welcome to my professional portfolio. My name is Monica, and I appreciate your interest in learning more about my background and experience in the field of web development.
+In today's digital age, web development stands as a cornerstone skillset, essential for navigating and thriving in the ever-evolving technological landscape. As our world increasingly gravitates toward digital platforms, proficiency in web development becomes not only advantageous but necessary for success.
+Within this portfolio, I aim to provide insight into my journey, expertise, and contributions within the realm of web development. Thank you for taking the time to explore my portfolio, and I look forward to sharing more with you.</p>
+  <img src="C:\Users\Monica Gliga\OneDrive\Documents\GitHub\HTML-and-CSS-Projects\Basic_HTML_and_CSS\One-Page\circuit.jpg" alt="Image in header">
+</header>
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#github">GitHub</a>
+  <a href="#contact">Contact</a>
+</nav>
+<div class="container">
+  <div class="content">
+    <img src="C:\Users\Monica Gliga\OneDrive\Documents\GitHub\HTML-and-CSS-Projects\Basic_HTML_and_CSS\One-Page\creative mind.webp" alt="Image 1" onclick="openModal();currentSlide(1)">
+  </div>
+  <div class="content">
+    <h2 class="title" id="about">About Me</h2>
+    <p class="description">Diving into new ideas fuels my passion, especially when it comes to coding and crafting unique websites. The Tech Academy's Software Developer Boot Camp has equipped me with skills in HTML, CSS, JavaScript, SQL, and more. From creating a space-themed website with HTML, CSS, and Bootstrap to mastering dynamic login forms and utilizing Bootstrap for responsive designs, each project has honed my abilities. My ultimate goal is to build my own website to showcase my products. I'm confident in my skills and eager to assist with any questions you may have. Let's connect!</p>
+  </div>
+  <div class="content">
+    <h2 class="title" id="github">GitHub</h2>
+    <p class="description">You can explore my coding projects on my GitHub profile by following this link: <a href="https://github.com/yourusername" class="github-link" target="_blank"> https://github.com/monalucy/HTML-and-CSS-Projects.git</a>.</p>
+  </div>
+  <div class="content" id="contact">
+    <form>
+      <h2 class="title">Contact Me</h2>
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email">
+      <textarea placeholder="Message"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <div class="content">
+    <img src="C:\Users\Monica Gliga\OneDrive\Documents\GitHub\HTML-and-CSS-Projects\Basic_HTML_and_CSS\One-Page\github.jpg" alt="Image 2" onclick="openModal();currentSlide(2)">
+  </div>
+  <div class="content">
+    <img src="C:\Users\Monica Gliga\OneDrive\Documents\GitHub\HTML-and-CSS-Projects\Basic_HTML_and_CSS\One-Page\Top-6-Software-Development-Methodologies.jpg" alt="Image 3" style="width: 100%;" onclick="openModal();currentSlide(3)">
+  </div>
+  <div class="content">
+    <img src="C:\Users\Monica Gliga\OneDrive\Documents\GitHub\HTML-and-CSS-Projects\Basic_HTML_and_CSS\One-Page\1.jpg" alt="Image 4" onclick="openModal();currentSlide(4)">
+  </div>
+  <div class="content">
+    <img src="C:\Users\Monica Gliga\OneDrive\Documents\GitHub\HTML-and-CSS-Projects\Basic_HTML_and_CSS\One-Page\2.jpg" alt="Image 5" onclick="openModal();currentSlide(5)">
+  </div>
+  <div class="content">
+    <img src="C:\Users\Monica Gliga\OneDrive\Documents\GitHub\HTML-and-CSS-Projects\Basic_HTML_and_CSS\One-Page\3.jpg" alt="Image 6" onclick="openModal();currentSlide(6)">
+  </div>
+  <div class="content">
+    <img src="C:\Users\Monica Gliga\OneDrive\Documents\GitHub\HTML-and-CSS-Projects\Basic_HTML_and_CSS\One-Page\4.jpg" alt="Image 7" onclick="openModal();currentSlide(7)">
+  </div>
+</div>
+<footer>
+  <p>2024 Tech Academy. All rights reserved.</p>
+  <img src="C:\Users\Monica Gliga\OneDrive\Documents\GitHub\HTML-and-CSS-Projects\Basic_HTML_and_CSS\One-Page\blue background.jpg" alt="Image in footer" style="width: 100%;">
+</footer>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+    <div class="mySlides">
+      <img src="C:\Users\Monica Gliga\OneDrive\Documents\GitHub\HTML-and-CSS-Projects\Basic_HTML_and_CSS\One-Page\creative mind.webp" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <img src="C:\Users\Monica Gliga\OneDrive\Documents\GitHub\HTML-and-CSS-Projects\Basic_HTML_and_CSS\One-Page\github.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <img src="C:\Users\Monica Gliga\OneDrive\Documents\GitHub\HTML-and-CSS-Projects\Basic_HTML_and_CSS\One-Page\Top-6-Software-Development-Methodologies.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <img src="C:\Users\Monica Gliga\OneDrive\Documents\GitHub\HTML-and-CSS-Projects\Basic_HTML_and_CSS\One-Page\1.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <img src="C:\Users\Monica Gliga\OneDrive\Documents\GitHub\HTML-and-CSS-Projects\Basic_HTML_and_CSS\One-Page\2.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <img src="C:\Users\Monica Gliga\OneDrive\Documents\GitHub\HTML-and-CSS-Projects\Basic_HTML_and-CSS\One-Page\3.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <img src="C:\Users\Monica Gliga\OneDrive\Documents\GitHub\HTML-and-CSS-Projects\Basic_HTML_and-CSS\One-Page\4.jpg" style="width:100%">
+    </div>
+  </div>
+</div>
+
+<script>
+  let slideIndex = 1;
+  
+  // Open the Modal
+  function openModal() {
+    document.getElementById("myModal").style.display = "block";
+    showSlides(slideIndex);
+  }
+  
+  // Close the Modal
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+  
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
+  }
+</script>
+
+</body>
+</html>
